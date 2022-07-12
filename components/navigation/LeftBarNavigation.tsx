@@ -32,7 +32,7 @@ function LeftBarNavigation() {
          </li>
 
          <li>
-            <a href="/Error/Error404" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <a href="/Profile/KimDog" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                <UserCircleIcon className='h-10'/>
                <span className="flex-1 ml-3 whitespace-nowrap">Users</span>
             </a>
