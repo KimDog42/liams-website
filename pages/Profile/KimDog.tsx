@@ -5,7 +5,6 @@ function KimDog() {
   return (
     <div>
         <main className="flex-wrap overflow-hidden">
-            <h1>Hello</h1>
         </main>
         <LeftBarNavigation/>
     </div>

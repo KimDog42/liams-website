@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import LeftBar from '../components/navigation/LeftBarNavigation'
+import RightBarNavigation from './../components/navigation/RightBarNavigation';
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
         <LeftBar/>
 
         {/*Right Sidebar*/}
+        <RightBarNavigation/>
         </main>
 
     </div>
