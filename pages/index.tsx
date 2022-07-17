@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import LeftBar from '../components/navigation/LeftBarNavigation'
-import RightBarNavigation from './../components/navigation/RightBarNavigation';
+import Topbar from '../components/Navigation/Topbar'
+
 
 const Home: NextPage = () => {
   return (
@@ -11,17 +11,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="" />
       </Head>
 
-      <main>
-        {/*Left Sidebar*/}
-        <LeftBar/>
-
-        {/*Right Sidebar*/}
-        <RightBarNavigation/>
-        </main>
+      <Topbar/>
 
     </div>
   )
 }
 
 export default Home
- 

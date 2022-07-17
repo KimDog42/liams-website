@@ -1,15 +1,68 @@
-import React from 'react'
+import React from 'react';
+import { Modal, Input, Row, Checkbox, Button, Text } from "@nextui-org/react"
 
 function Profile() {
+  const [visible, setVisible] = React.useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
   return (
     <div>
-        <div className="flex space-x-4 items-center">
-    <img className="h-10 rounded-full" src="https://cdn.discordapp.com/attachments/881019698874032220/996202430532436038/avatars-000396781371-h4mpjo-t500x500.jpg" alt=""/>
-    <div className="space-y-1 font-medium dark:text-white">
-        <div>Guest</div>
-        <div className="text-sm text-gray-300 dark:text-gray-300">Joined in July 2022!</div>
+
+
+        <div>
+      <Button auto color="gradient" shadow onClick={handler}>
+        Sign In
+      </Button>
+      <Modal
+        closeButton
+        preventClose
+        animated={false}
+        aria-labelledby="modal-title"
+        open={visible}
+        onClose={closeHandler}
+      >
+        <Modal.Header>
+          <Text id="modal-title" size={18}>
+            Sign In
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Input
+            clearable
+            bordered
+            fullWidth
+            color="primary"
+            size="lg"
+            placeholder="Email"
+          />
+          <Input
+            clearable
+            bordered
+            fullWidth
+            color="primary"
+            size="lg"
+            placeholder="Password"
+          />
+          <Row justify="space-between">
+            <Checkbox  defaultSelected={true}>
+              <Text size={14}>Remember me</Text>
+            </Checkbox>
+            <Text size={14}>Forgot password?</Text>
+          </Row>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button auto flat color="error" onClick={closeHandler}>
+            Close
+          </Button>
+          <Button auto onClick={closeHandler}>
+            Sign In
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
-</div>
     </div>
   )
 }
