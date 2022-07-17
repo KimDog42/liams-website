@@ -7,7 +7,7 @@ import {
     ShoppingBagIcon,
 } from "@heroicons/react/solid"
 import Profile from '../Profile';
-import { Modal, Input, Row, Checkbox, Button, Text } from "@nextui-org/react";
+import { Modal, Input, Row, Checkbox, Button, Text, Tooltip } from "@nextui-org/react";
 
 function Topbar() {
     const [visible, setVisible] = React.useState(false);
@@ -21,9 +21,26 @@ function Topbar() {
 
         <div className="text-white flex flex-row justify-start p-5 space-x-5">
         <Profile/>
+            <a href="/">
+              <Tooltip placement="bottom" content="Home">
             <HomeIcon className="h-10 hover:bg-indigo-500 rounded cursor-pointer space-x-5"/>
-            <SearchIcon className="h-10 hover:bg-indigo-500 rounded cursor-pointer space-x-5" onClick={handler}/>
-            <UserGroupIcon className="h-10 hover:bg-indigo-500 rounded cursor-pointer space-x-5"/>
+            </Tooltip>
+            </a>
+
+            <Tooltip placement="bottom" content="Search">
+              <SearchIcon className="h-10 hover:bg-indigo-500 rounded cursor-pointer space-x-5" onClick={handler}/>
+            </Tooltip>
+
+            <Tooltip placement="bottom" content="Friends">
+              <UserGroupIcon className="h-10 hover:bg-indigo-500 rounded cursor-pointer space-x-5"/>
+            </Tooltip>
+            
+            <Tooltip placement="bottom" content="Settings">
+              <a href="/Profile/Settings">
+            <CogIcon className="h-10 hover:bg-indigo-500 rounded cursor-pointer space-x-5"/>
+            </a>
+            </Tooltip>
+            
         </div>
 
         <div>
